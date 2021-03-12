@@ -17,17 +17,34 @@ exiftool
 ```bash
 type
 file
-strings [-n : length, -t x : view offset x=hex d=decimal]
+strings 
+	#-n :length of string
+	#-t x :view offset x=hex d=decimal
 binwalk 
-	#checks for embedded files
-	#-Me recursively extracts any files
-steghide
+	# checks for embedded files
+	#-Me :recursively extracts any files
+steghide extract -sf picture.jpg
+	# usually used with passwords but can work without
+	#-sf :specify filename
+pngcheck -vtpf picture.png
+	#-v :verbose
+	#-t :display text
+	#-p :displays contents of optional chunks
+	#-f :continue after major errors
+
 ```
 
 
 ### Tools
 - this tool is useful to convert GPS coordinates / get location
+
 [GPS-coordinates](https://www.gps-coordinates.net)
 - another tool they use is sometimes is DIIT (Digital Invisible Ink Toolkit)
+
 [DIIT](http://diit.sourceforge.net/)
-- a great online tool 
+- an online port of StegSolve which inlucdes 32 bit planes, RGBS values, and color palettes
+
+[StegOnline](https://stegonline.georgeom.net/upload)
+- Extra helpful collection of tools in docker image
+
+[Stego-Toolkit](https://www.kitploit.com/2018/06/stego-toolkit-collection-of.html)
