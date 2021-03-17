@@ -4,14 +4,14 @@
 ## Overall Notes
 - always double check the answer, being the only one bring down team accuracy kinda sucks
 - always make sure you know what section you are in before trying to answer
+- there are more and more webapps that have these tools built in
 
 
 ## Stego / OSINT
 ### Commands
 - view metadata:
 ```bash
-exif 
-# or maybe exif2
+exif  #or exif2
 exiftool
 ```
 - check file:
