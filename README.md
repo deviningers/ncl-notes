@@ -1,11 +1,12 @@
 # NCL Notebook
-My National Cyber League Personal Notes so I can remember what weird commands I used and how they work
+> My National Cyber League Personal Notes so I can remember what weird commands I used and how they work
 
 ## Overall Notes
 - always double check the answer, being the only one bring down team accuracy kinda sucks
+- always make sure you know what section you are in before trying to answer
 
 
-## Stego
+## Stego / OSINT
 ### Commands
 - view metadata:
 ```bash
@@ -20,6 +21,9 @@ file
 strings 
 	#-n :length of string
 	#-t x :view offset x=hex d=decimal
+```
+- pull things out of file
+```bash
 binwalk 
 	# checks for embedded files
 	#-Me :recursively extracts any files
@@ -33,18 +37,17 @@ pngcheck -vtpf picture.png
 	#-f :continue after major errors
 
 ```
-
-
 ### Tools
-- this tool is useful to convert GPS coordinates / get location
+- this tool is useful to convert GPS coordinates / get location - [GPS-coordinates](https://www.gps-coordinates.net)
+- another tool they use is sometimes is DIIT (Digital Invisible Ink Toolkit) - [DIIT](http://diit.sourceforge.net/)
+- an online port of StegSolve which inlucdes 32 bit planes, RGBS values, and color palettes - [StegOnline](https://stegonline.georgeom.net/upload)
+- Extra helpful collection of tools in docker image - [Stego-Toolkit](https://www.kitploit.com/2018/06/stego-toolkit-collection-of.html)
 
-[GPS-coordinates](https://www.gps-coordinates.net)
-- another tool they use is sometimes is DIIT (Digital Invisible Ink Toolkit)
+## Enumeration & Exploitation
 
-[DIIT](http://diit.sourceforge.net/)
-- an online port of StegSolve which inlucdes 32 bit planes, RGBS values, and color palettes
+## Log Analysis 
 
-[StegOnline](https://stegonline.georgeom.net/upload)
-- Extra helpful collection of tools in docker image
+## Crpto 
 
-[Stego-Toolkit](https://www.kitploit.com/2018/06/stego-toolkit-collection-of.html)
+## Password Cracking
+
