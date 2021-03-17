@@ -37,7 +37,7 @@ pngcheck -vtpf picture.png
 	#-f :continue after major errors
 
 ```
-### Tools
+### Links
 - this tool is useful to convert GPS coordinates / get location - [GPS-coordinates](https://www.gps-coordinates.net)
 - another tool they use is sometimes is DIIT (Digital Invisible Ink Toolkit) - [DIIT](http://diit.sourceforge.net/)
 - an online port of StegSolve which inlucdes 32 bit planes, RGBS values, and color palettes - [StegOnline](https://stegonline.georgeom.net/upload)
@@ -48,6 +48,10 @@ pngcheck -vtpf picture.png
 ## Log Analysis 
 
 ## Crpto 
+### Links
+- Great crypto solveing website - [Cryptii](https://cryptii.com/)
+- A crypto identifier w/ solvers - [boxentriq](https://www.boxentriq.com/code-breaking/cipher-identifier)
+- Good for advanced algos - [CyberChef](https://gchq.github.io/CyberChef/)
 
 ## Password Cracking
 
