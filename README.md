@@ -1,4 +1,4 @@
-# NCL Notebook
+ # NCL Notebook
 > My National Cyber League Personal Notes so I can remember what weird commands I used and how they work
 
 ## Overall Notes
@@ -52,6 +52,9 @@ pngcheck -vtpf picture.png
 - Great crypto solveing website - [Cryptii](https://cryptii.com/)
 - A crypto identifier w/ solvers - [boxentriq](https://www.boxentriq.com/code-breaking/cipher-identifier)
 - Good for advanced algos - [CyberChef](https://gchq.github.io/CyberChef/)
+- lots of solvers - [dcode](https://www.dcode.fr/tools-list)
+- Cryptogram solver tool - [quipqiup](https://www.quipqiup.com/)
+- another tool site - [rumkin](http://rumkin.com/tools/cipher/cryptogram-solver.php)
 
 ## Password Cracking
 
