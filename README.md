@@ -46,6 +46,36 @@ pngcheck -vtpf picture.png
 ## Enumeration & Exploitation
 
 ## Log Analysis 
+### Commands
+- Pull out column(s) based on designated fiter(s)
+```bash
+awk -F "seperator" '{commands $value}'
+awk -F ";"     # -F allows you to specify the column splitter
+awk -F " |:"   # filters based on both spaces and :'s
+awk '{print $1 " and " $(NF)}'  # command prints "first column and last column"
+awk '{n += $1}; END{print n}'   # sums up all $1 values and returns that value at the end 
+```
+- filter based on strings or regex
+```bash 
+grep
+grep -i -v -c -o -r    # --ignore-case, -v --invert-match, --count, --only-matching, --recursive
+grep -A NUM -B NUM     # --after-context, --before-context, prints NUM lines before or after grepped lines
+grep "string" 'regex'  # single quotes is for regex and double quotes is strings
+grep -E -o "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)" file   # Real IP regex
+```
+- extra commands
+```bash
+wc        # word count, -l to count lines, -w to count words, -m to count characters, -c to count bytes
+tr 	  # translate, -d 'char' to delete character, 
+sort      # -n to sort by numeric values 
+uniq      # -c to count occurances (needs to be sorted first)
+```
+
+### Links
+- [Grep regex](https://linuxize.com/post/regular-expressions-in-grep/)
+- [Stole sum idea from here](https://askubuntu.com/questions/785038/how-can-i-sum-numbers-on-lines-in-a-file)
+- [AWK is cool](https://www.howtogeek.com/562941/how-to-use-the-awk-command-on-linux/)
+
 
 ## Crpto 
 ### Links
