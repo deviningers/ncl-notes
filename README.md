@@ -45,6 +45,10 @@ pngcheck -vtpf picture.png
 
 ## Enumeration & Exploitation
 
+### Links 
+- [Cutter](https://cutter.re/)
+- [Ghydra](https://ghidra-sre.org/)
+
 ## Log Analysis 
 ### Commands
 - Pull out column(s) based on designated fiter(s)
@@ -69,6 +73,7 @@ wc        # word count, -l to count lines, -w to count words, -m to count charac
 tr 	  # translate, -d 'char' to delete character, 
 sort      # -n to sort by numeric values 
 uniq      # -c to count occurances (needs to be sorted first)
+split -l x input.txt outputPrefix    # split file into smaller files after x lines  
 ```
 
 ### Links
