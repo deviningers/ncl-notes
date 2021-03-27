@@ -104,4 +104,12 @@ split -l x input.txt outputPrefix    # split file into smaller files after x lin
 - another tool site - [rumkin](http://rumkin.com/tools/cipher/cryptogram-solver.php)
 
 ## Password Cracking
+- commands
+```bash
+hashid path/to/file
+hash-identifier
+	# prompts for hash, w/ cool ascii art
 
+```
+
+### Links
