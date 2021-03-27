@@ -16,7 +16,6 @@ exiftool
 ```
 - check file:
 ```bash
-type
 file
 strings 
 	#-n :length of string
@@ -35,8 +34,21 @@ pngcheck -vtpf picture.png
 	#-t :display text
 	#-p :displays contents of optional chunks
 	#-f :continue after major errors
-
+foremost file.sus
+	# Carves out embedded and appended files and dumps them to output
+outguess -k "key string" -r path/to/file.jpg output.txt
+zsteg file.png    
+	# needs to be installed with $ gem install zsteg
+stegsnow -C -p password path/to/file.png
+stegcracker steg.jpg wordlist.txt
+	# brute forces passwords using wordlists (takes a while) 
 ```
+- graphical programs
+	- Stegosuite
+	- DIIT (Digital Invisible Ink Toolkit) 
+	- OpenStego
+
+
 ### Links
 - this tool is useful to convert GPS coordinates / get location - [GPS-coordinates](https://www.gps-coordinates.net)
 - another tool they use is sometimes is DIIT (Digital Invisible Ink Toolkit) - [DIIT](http://diit.sourceforge.net/)
