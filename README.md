@@ -1,10 +1,11 @@
  # NCL Notebook
 > My National Cyber League Personal Notes so I can remember what weird commands I used and how they work
 
-## Overall Notes
-- always double check the answer, being the only one bring down team accuracy kinda sucks
-- always make sure you know what section you are in before trying to answer
-- there are more and more webapps that have these tools built in
+## Overall Suggestions
+- always double check the answer, being the only one bringing down team accuracy kinda sucks
+- there are more and more online webapps that have these tools built in (just google it)
+- If you are really stuck, it helps to dumb it down and/or try going at it from another angle
+- Organize your time, the challenges get surprisingly easier when you have food in your belly and a good nights rest
 
 
 ## Stego / OSINT
