@@ -2,14 +2,14 @@
 > My National Cyber League Personal Notes so I can remember what weird commands I used and how they work
 
 ## Overall Suggestions
-- always double check the answer, being the only one bringing down team accuracy kinda sucks
-- there are more and more online webapps that have these tools built in (just google it)
+- Always double check the answer, being the only one bringing down team accuracy kinda sucks
+- There are more and more online webapps that have these tools built in (just google it)
 - If you are really stuck, it helps to dumb it down and/or try going at it from another angle
 - Organize your time, the challenges get surprisingly easier when you have food in your belly and a good nights rest
 
 
 ## Stego
-### Commands
+#### Commands
 - view metadata:
 ```bash
 exif  #or exif2
@@ -50,7 +50,7 @@ stegcracker steg.jpg wordlist.txt
 	- OpenStego
 
 
-### Links
+#### Links
 - this tool is useful to convert GPS coordinates / get location - [GPS-coordinates](https://www.gps-coordinates.net)
 - another tool they use is sometimes is DIIT (Digital Invisible Ink Toolkit) - [DIIT](http://diit.sourceforge.net/)
 - an online port of StegSolve which inlucdes 32 bit planes, RGBS values, and color palettes - [StegOnline](https://stegonline.georgeom.net/upload)
@@ -60,14 +60,14 @@ stegcracker steg.jpg wordlist.txt
 
 ## Enumeration & Exploitation
 
-### Links 
+#### Links 
 - Free programs for reverse engineering:
 	- [Cutter](https://cutter.re/)
 	- [Ghydra](https://ghidra-sre.org/)
 - Online reverse engineering tool - [odaweb](https://onlinedisassembler.com/odaweb/)
 
 ## Log Analysis 
-### Commands
+#### Commands
 - Pull out column(s) based on designated fiter(s)
 ```bash
 awk -F "seperator" '{commands $value}'
@@ -93,14 +93,14 @@ uniq      # -c to count occurances (needs to be sorted first)
 split -l x input.txt outputPrefix    # split file into smaller files after x lines  
 ```
 
-### Links
+#### Links
 - [Grep regex](https://linuxize.com/post/regular-expressions-in-grep/)
 - [Stole sum idea from here](https://askubuntu.com/questions/785038/how-can-i-sum-numbers-on-lines-in-a-file)
 - [AWK is cool](https://www.howtogeek.com/562941/how-to-use-the-awk-command-on-linux/)
 
 
 ## Crpto 
-### Links
+#### Links
 - Great crypto solveing website - [Cryptii](https://cryptii.com/)
 - A crypto identifier w/ solvers - [boxentriq](https://www.boxentriq.com/code-breaking/cipher-identifier)
 - Good for advanced algos - [CyberChef](https://gchq.github.io/CyberChef/)
@@ -109,6 +109,7 @@ split -l x input.txt outputPrefix    # split file into smaller files after x lin
 - another tool site - [rumkin](http://rumkin.com/tools/cipher/cryptogram-solver.php)
 
 ## Password Cracking
+#### Commands
 - identify hashes:
 ```bash
 hashid path/to/file
@@ -120,7 +121,7 @@ hash-identifier
 ```
 - Include John2... tools 
 
-### Links
+#### Links
 - Identify hashes - [identifier1](https://hashes.com/en/tools/hash_identifier)
 - Use this for ez password cracking - [CrackStation](https://crackstation.net/)
 - Hashcat instructions, or just read the man page - [Hashcat](https://hashcat.net/wiki/doku.php?id=hashcat)
