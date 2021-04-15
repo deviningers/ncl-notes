@@ -8,7 +8,7 @@
 - Organize your time, the challenges get surprisingly easier when you have food in your belly and a good nights rest
 
 
-## Stego / OSINT
+## Stego
 ### Commands
 - view metadata:
 ```bash
@@ -22,7 +22,7 @@ strings
 	#-n :length of string
 	#-t x :view offset x=hex d=decimal
 ```
-- pull things out of file
+- pull things out of files:
 ```bash
 binwalk 
 	# checks for embedded files
@@ -56,11 +56,15 @@ stegcracker steg.jpg wordlist.txt
 - an online port of StegSolve which inlucdes 32 bit planes, RGBS values, and color palettes - [StegOnline](https://stegonline.georgeom.net/upload)
 - Extra helpful collection of tools in docker image - [Stego-Toolkit](https://www.kitploit.com/2018/06/stego-toolkit-collection-of.html)
 
+## OSINT
+
 ## Enumeration & Exploitation
 
 ### Links 
-- [Cutter](https://cutter.re/)
-- [Ghydra](https://ghidra-sre.org/)
+- Free programs for reverse engineering:
+	- [Cutter](https://cutter.re/)
+	- [Ghydra](https://ghidra-sre.org/)
+- Online reverse engineering tool - [odaweb](https://onlinedisassembler.com/odaweb/)
 
 ## Log Analysis 
 ### Commands
@@ -105,12 +109,18 @@ split -l x input.txt outputPrefix    # split file into smaller files after x lin
 - another tool site - [rumkin](http://rumkin.com/tools/cipher/cryptogram-solver.php)
 
 ## Password Cracking
-- commands
+- identify hashes:
 ```bash
 hashid path/to/file
 hash-identifier
 	# prompts for hash, w/ cool ascii art
-
 ```
+- crack passwords:
+```bash
+```
+- Include John2... tools 
 
 ### Links
+- Identify hashes - [identifier1](https://hashes.com/en/tools/hash_identifier)
+- Use this for ez password cracking - [CrackStation](https://crackstation.net/)
+- Hashcat instructions, or just read the man page - [Hashcat](https://hashcat.net/wiki/doku.php?id=hashcat)
