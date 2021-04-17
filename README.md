@@ -45,7 +45,7 @@ stegsnow -C -p password path/to/file.png
 stegcracker steg.jpg wordlist.txt
 	# brute forces passwords using wordlists (takes a while) 
 ```
-- graphical programs
+- Gross GUI programs:
 	- Stegosuite
 	- DIIT (Digital Invisible Ink Toolkit) 
 	- OpenStego
@@ -56,9 +56,12 @@ stegcracker steg.jpg wordlist.txt
 - an online port of StegSolve which inlucdes 32 bit planes, RGBS values, and color palettes - [StegOnline](https://stegonline.georgeom.net/upload)
 - Extra helpful collection of tools in docker image - [Stego-Toolkit](https://www.kitploit.com/2018/06/stego-toolkit-collection-of.html)
 
-## OSINT
+## Open Source Intelligence (OSINT)
+
+- this is really just googling and going off hunches till you make it
 
 #### Links
+- How to google dork - (Wiki)[https://en.wikipedia.org/wiki/Google_hacking}
 - this tool is useful to convert GPS coordinates / get location - [GPS-coordinates](https://www.gps-coordinates.net)
 - online exif viewer (one of many) - [Exif](http://exif.regex.info/exif.cgi)
 - Reverse image search:
@@ -106,7 +109,7 @@ split -l x input.txt outputPrefix    # split file into smaller files after x lin
 - [AWK is cool](https://www.howtogeek.com/562941/how-to-use-the-awk-command-on-linux/)
 
 
-## Crpto 
+## Crypto 
 #### Links
 - Great crypto solveing website - [Cryptii](https://cryptii.com/)
 - A crypto identifier w/ solvers - [boxentriq](https://www.boxentriq.com/code-breaking/cipher-identifier)
@@ -125,8 +128,9 @@ hash-identifier
 	# prompts for hash, w/ cool ascii art
 ```
 - creating dictonary:
+	- rockyou.txt is a good start to figure out if there's a pattern 
 	- search google/github for premade lists eg: txt of all pokemon
-	- wikipedia also has a lot of lists but they might require cleaning
+	- wikipedia also has a lot of lists but they probably require cleaning
 - crack hashes using hashcat (the cool way):
 ```bash
 hashcat -m <hash mode> -a <attack type> hashes.hash dictionary [-r /usr/share/hashcat/rules/ruleset.rule] # use "--stdout" to print out guesses 
@@ -147,6 +151,7 @@ zip2john  					# pull hash out of encrypted zip (need to remore another part bef
 #### Links
 - Identify hashes - [identifier1](https://hashes.com/en/tools/hash_identifier)
 - Use this for ez password cracking - [CrackStation](https://crackstation.net/)
+- When making a dictionary and you're too lazy to use a rule to switch characters - [ConvertCase](https://convertcase.net/)
 - Hashcat instructions, or just read the man page - [Hashcat](https://hashcat.net/wiki/doku.php?id=hashcat)
 - Hashcat ruleset creation help - [Rule Based Attack](https://hashcat.net/wiki/doku.php?id=rule_based_attack)
 - An article discussing rulelists - [One rule to rule them all](https://notsosecure.com/one-rule-to-rule-them-all/)
