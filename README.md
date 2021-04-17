@@ -6,6 +6,7 @@
 - There are more and more online webapps that have these tools built in (just google it)
 - If you are really stuck, it helps to dumb it down and/or try going at it from another angle
 - Organize your time, the challenges get surprisingly easier when you have food in your belly and a good nights rest
+- "Try harder"
 
 
 ## Stego
@@ -51,12 +52,18 @@ stegcracker steg.jpg wordlist.txt
 
 
 #### Links
-- this tool is useful to convert GPS coordinates / get location - [GPS-coordinates](https://www.gps-coordinates.net)
 - another tool they use is sometimes is DIIT (Digital Invisible Ink Toolkit) - [DIIT](http://diit.sourceforge.net/)
 - an online port of StegSolve which inlucdes 32 bit planes, RGBS values, and color palettes - [StegOnline](https://stegonline.georgeom.net/upload)
 - Extra helpful collection of tools in docker image - [Stego-Toolkit](https://www.kitploit.com/2018/06/stego-toolkit-collection-of.html)
 
 ## OSINT
+
+#### Links
+- this tool is useful to convert GPS coordinates / get location - [GPS-coordinates](https://www.gps-coordinates.net)
+- online exif viewer (one of many) - [Exif](http://exif.regex.info/exif.cgi)
+- Reverse image search:
+	- [Google Images](https://images.google.com/)
+	- [Tineye](https://tineye.com/)
 
 ## Enumeration & Exploitation
 
@@ -108,6 +115,7 @@ split -l x input.txt outputPrefix    # split file into smaller files after x lin
 - Cryptogram solver tool - [quipqiup](https://www.quipqiup.com/)
 - another tool site - [rumkin](http://rumkin.com/tools/cipher/cryptogram-solver.php)
 
+
 ## Password Cracking
 #### Commands
 - identify hashes:
@@ -116,12 +124,30 @@ hashid path/to/file
 hash-identifier
 	# prompts for hash, w/ cool ascii art
 ```
-- crack passwords:
+- creating dictonary:
+	- search google/github for premade lists eg: txt of all pokemon
+	- wikipedia also has a lot of lists but they might require cleaning
+- crack hashes using hashcat (the cool way):
 ```bash
+hashcat -m <hash mode> -a <attack type> hashes.hash dictionary [-r /usr/share/hashcat/rules/ruleset.rule] # use "--stdout" to print out guesses 
+hashcat -m 0 - a 6 hash dict "?n?l?u?s?a" 	# to append mask to end
+hashcat -m 0 -a 6 hash "?a?a" dict         	# to preppend mask to beginning
 ```
-- Include John2... tools 
+- make your own ruleset, or you can search for others on github
+```bash
+./mp64 -o output.rule "pass?a"
+# will generate a rulelist of pass1, pass2, passA, pass!...
+```
+- The ***'easier'*** CPU intensive hash cracking tool, John The Ripper:
+```bash
+john hash.hash --wordlist=dict --rules:All	# Hail Mary
+zip2john  					# pull hash out of encrypted zip (need to remore another part before using hashcat)
+```
 
 #### Links
 - Identify hashes - [identifier1](https://hashes.com/en/tools/hash_identifier)
 - Use this for ez password cracking - [CrackStation](https://crackstation.net/)
 - Hashcat instructions, or just read the man page - [Hashcat](https://hashcat.net/wiki/doku.php?id=hashcat)
+- Hashcat ruleset creation help - [Rule Based Attack](https://hashcat.net/wiki/doku.php?id=rule_based_attack)
+- An article discussing rulelists - [One rule to rule them all](https://notsosecure.com/one-rule-to-rule-them-all/)
+- Practice w/ Defcon's hashlist - [Defcon 2020](https://github.com/62726164/cmiyc2020)
