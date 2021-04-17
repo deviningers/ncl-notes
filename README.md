@@ -9,7 +9,10 @@
 - "Try harder"
 
 
-## Stego
+## Stegonography
+
+- They sometimes have hints to which tool to use
+
 #### Commands
 - view metadata:
 ```bash
@@ -52,31 +55,39 @@ stegcracker steg.jpg wordlist.txt
 
 
 #### Links
-- another tool they use is sometimes is DIIT (Digital Invisible Ink Toolkit) - [DIIT](http://diit.sourceforge.net/)
-- an online port of StegSolve which inlucdes 32 bit planes, RGBS values, and color palettes - [StegOnline](https://stegonline.georgeom.net/upload)
+- Another tool they use is sometimes is DIIT (Digital Invisible Ink Toolkit) - [DIIT](http://diit.sourceforge.net/)
+- An online port of StegSolve which inlucdes 32 bit planes, RGBS values, and color palettes - [StegOnline](https://stegonline.georgeom.net/upload)
 - Extra helpful collection of tools in docker image - [Stego-Toolkit](https://www.kitploit.com/2018/06/stego-toolkit-collection-of.html)
 
 ## Open Source Intelligence (OSINT)
 
-- this is really just googling and going off hunches till you make it
+- This is really just googling and going off hunches till you make it
 
 #### Links
-- How to google dork - (Wiki)[https://en.wikipedia.org/wiki/Google_hacking}
-- this tool is useful to convert GPS coordinates / get location - [GPS-coordinates](https://www.gps-coordinates.net)
-- online exif viewer (one of many) - [Exif](http://exif.regex.info/exif.cgi)
+- How to google dork - [Wiki](https://en.wikipedia.org/wiki/Google_hacking)
+- This tool is useful to convert GPS coordinates / get location - [GPS-coordinates](https://www.gps-coordinates.net)
+- Online exif viewer (one of many) - [Exif](http://exif.regex.info/exif.cgi)
 - Reverse image search:
 	- [Google Images](https://images.google.com/)
 	- [Tineye](https://tineye.com/)
 
 ## Enumeration & Exploitation
 
+- Go talk to Jacob M
+
 #### Links 
 - Free programs for reverse engineering:
 	- [Cutter](https://cutter.re/)
 	- [Ghydra](https://ghidra-sre.org/)
 - Online reverse engineering tool - [odaweb](https://onlinedisassembler.com/odaweb/)
+- Online decompiler for multiple languages - [decompiler](https://www.decompiler.com/)
+
 
 ## Log Analysis 
+
+- Bash's pipe ```|``` is your friend! eg: ```cat log | grep "ip:" | awk '{print $1}' | wc -l```
+- I also like using [Atom](https://atom.io/) with ctrl+f, regex, and then cutting/replacing all
+
 #### Commands
 - Pull out column(s) based on designated fiter(s)
 ```bash
@@ -86,7 +97,7 @@ awk -F " |:"   # filters based on both spaces and :'s
 awk '{print $1 " and " $(NF)}'  # command prints "first column and last column"
 awk '{n += $1}; END{print n}'   # sums up all $1 values and returns that value at the end 
 ```
-- filter based on strings or regex
+- Filter based on strings or regex
 ```bash 
 grep
 grep -i -v -c -o -r    # --ignore-case, -v --invert-match, --count, --only-matching, --recursive
@@ -94,7 +105,7 @@ grep -A NUM -B NUM     # --after-context, --before-context, prints NUM lines bef
 grep "string" 'regex'  # single quotes is for regex and double quotes is strings
 grep -E -o "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)" file   # Real IP regex
 ```
-- extra commands
+- Extra commands:
 ```bash
 wc        # word count, -l to count lines, -w to count words, -m to count characters, -c to count bytes
 tr 	  # translate, -d 'char' to delete character, 
@@ -107,6 +118,7 @@ split -l x input.txt outputPrefix    # split file into smaller files after x lin
 - [Grep regex](https://linuxize.com/post/regular-expressions-in-grep/)
 - [Stole sum idea from here](https://askubuntu.com/questions/785038/how-can-i-sum-numbers-on-lines-in-a-file)
 - [AWK is cool](https://www.howtogeek.com/562941/how-to-use-the-awk-command-on-linux/)
+- Git gud at regex - [Regex Practice](https://regexr.com/)
 
 
 ## Crypto 
@@ -114,9 +126,9 @@ split -l x input.txt outputPrefix    # split file into smaller files after x lin
 - Great crypto solveing website - [Cryptii](https://cryptii.com/)
 - A crypto identifier w/ solvers - [boxentriq](https://www.boxentriq.com/code-breaking/cipher-identifier)
 - Good for advanced algos - [CyberChef](https://gchq.github.io/CyberChef/)
-- lots of solvers - [dcode](https://www.dcode.fr/tools-list)
+- Lots of solvers - [dcode](https://www.dcode.fr/tools-list)
 - Cryptogram solver tool - [quipqiup](https://www.quipqiup.com/)
-- another tool site - [rumkin](http://rumkin.com/tools/cipher/cryptogram-solver.php)
+- Another tool site - [rumkin](http://rumkin.com/tools/cipher/cryptogram-solver.php)
 
 
 ## Password Cracking
