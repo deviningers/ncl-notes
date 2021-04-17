@@ -67,6 +67,7 @@ stegcracker steg.jpg wordlist.txt
 - How to google dork - [Wiki](https://en.wikipedia.org/wiki/Google_hacking)
 - This tool is useful to convert GPS coordinates / get location - [GPS-coordinates](https://www.gps-coordinates.net)
 - Online exif viewer (one of many) - [Exif](http://exif.regex.info/exif.cgi)
+- Sherlock is a cool tool that I sadly haven't had to use for NCL...yet - [Sherlock](https://github.com/sherlock-project/sherlock)
 - Reverse image search:
 	- [Google Images](https://images.google.com/)
 	- [Tineye](https://tineye.com/)
@@ -74,6 +75,7 @@ stegcracker steg.jpg wordlist.txt
 ## Enumeration & Exploitation
 
 - Go talk to Jacob M
+- Try running ```strings``` or ```file``` on it
 
 #### Links 
 - Free programs for reverse engineering:
@@ -81,6 +83,7 @@ stegcracker steg.jpg wordlist.txt
 	- [Ghydra](https://ghidra-sre.org/)
 - Online reverse engineering tool - [odaweb](https://onlinedisassembler.com/odaweb/)
 - Online decompiler for multiple languages - [decompiler](https://www.decompiler.com/)
+- GDB is also really cool if you learn how to use it - [GDB](https://trailofbits.github.io/ctf/exploits/binary1.html)
 
 
 ## Log Analysis 
@@ -130,6 +133,18 @@ split -l x input.txt outputPrefix    # split file into smaller files after x lin
 - Cryptogram solver tool - [quipqiup](https://www.quipqiup.com/)
 - Another tool site - [rumkin](http://rumkin.com/tools/cipher/cryptogram-solver.php)
 
+
+## Scanning / Enumeration
+- nmap
+```bash
+nmap <scan type> <options> <target(s)>
+nmap -sS 192.168.0.0/24		# example TCP scan that targets 192.168.0.1-254
+			#-Pn: include this if the host isn't responding to pings
+	 		#-sU: udp scan
+	 		#--script: to use premade or downloaded (github) scripts
+			#-sV: probe open ports to guess version/service info
+			#-A: include a lot of stuff
+```
 
 ## Password Cracking
 #### Commands
