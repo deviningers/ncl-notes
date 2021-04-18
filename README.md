@@ -156,7 +156,7 @@ hash-identifier
 ```
 - creating dictonary:
 	- rockyou.txt is a good start to figure out if there's a pattern 
-	- search google/github for premade lists eg: txt of all pokemon
+	- search google/[github](https://github.com/xajkep/wordlists) for premade lists eg: txt of all pokemon
 	- wikipedia also has a lot of lists but they probably require cleaning
 - crack hashes using hashcat (the cool way):
 ```bash
